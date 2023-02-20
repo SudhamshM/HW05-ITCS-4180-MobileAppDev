@@ -36,6 +36,7 @@ public class WeatherFragment extends Fragment {
     public static final String TAG = "hw05";
     FragmentWeatherBinding binder;
     private static final String ARG_CITY = "CITY";
+    String apiKey = ApiKey.API_KEY;
 
     // TODO: Rename and change types of parameters
     private City mCity;
@@ -102,7 +103,7 @@ public class WeatherFragment extends Fragment {
                 .newBuilder()
                 .addQueryParameter("lat", String.valueOf(mCity.getLat()))
                 .addQueryParameter("lon", String.valueOf(mCity.getLon()))
-                .addQueryParameter("appid", "6c4f247d33bb0e8c1a0228d1dd5fa79c")
+                .addQueryParameter("appid", apiKey)
                 .addQueryParameter("units", "imperial")
                 .build();
 
